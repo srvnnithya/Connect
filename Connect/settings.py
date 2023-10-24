@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -25,7 +26,7 @@ SECRET_KEY = 'django-insecure-gt^6bo^6(c75w*0cj$guj09^9m%z=1dsu&7pfn-n2lm!xk$1x-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['srvnnithya.pythonanywhere.com']
+ALLOWED_HOSTS = ['srvnnithya.pythonanywhere.com','127.0.0.1']
 
 
 # Application definition
@@ -54,7 +55,7 @@ ROOT_URLCONF = 'Connect.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS':[BASE_DIR,'templates'],
+        'DIRS':[os.path.join(BASE_DIR, 'Connect', 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
